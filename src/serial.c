@@ -88,10 +88,14 @@ zend_class_entry* registerSerialClass(void) {
   classEntry->ce_flags |= ZEND_ACC_FINAL | ZEND_ACC_NO_DYNAMIC_PROPERTIES;
   /* intercept object creation to change object handlers */
   classEntry->create_object = serialCreateObject;
-  /* disable serialization */
-  classEntry->serialize = zend_class_serialize_deny;
-  /* disable unserialization */
-  classEntry->unserialize = zend_class_unserialize_deny;
+
+  /* disable serialization/unserialization */
+  #ifdef ZEND_ACC_NOT_SERIALIZABLE
+    classEntry->ce_flags |= ZEND_ACC_NOT_SERIALIZABLE;
+  #else
+    classEntry->serialize = zend_class_serialize_deny;
+    classEntry->unserialize = zend_class_unserialize_deny;
+  #endif
 
   /* initialize serialObjectHandlers with standard object handlers */
   memcpy(&serialObjectHandlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
