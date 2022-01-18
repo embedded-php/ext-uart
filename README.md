@@ -1,12 +1,10 @@
 # phpuart
 
-Object-oriented PHP bindings for the [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)
-
-asynchronous serial communication protocol
+The UART PHP Extension provides an object-oriented wrapper to the UART Linux Kernel driver that gives users the ability to write code that interacts with external hardware using the  [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) asynchronous serial communication protocol.
 
 ## Acknowledgements
 
-This project takes a lot of inspiration from WiringPi.
+This project takes a lot of inspiration from [WiringPi](http://wiringpi.com).
 
 ## Requirements
 
