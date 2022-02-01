@@ -20,11 +20,11 @@
   extern zend_module_entry uart_module_entry;
   #define phpext_uart_ptr &uart_module_entry
 
-  #define PHP_UART_EXTNAME   "phpuart"
+  #define PHP_UART_EXTNAME   "uart"
   #define PHP_UART_VERSION   "0.0.1-dev"
   #define PHP_UART_AUTHOR    "flavioheleno"
-  #define PHP_UART_URL       "https://github.com/flavioheleno/phpuart"
-  #define PHP_UART_COPYRIGHT "Copyright (c) 2021"
+  #define PHP_UART_URL       "https://github.com/embedded-php/ext-uart"
+  #define PHP_UART_COPYRIGHT "Copyright (c) 2021-2022"
 
   #if defined(ZTS) && defined(COMPILE_DL_UART)
     ZEND_TSRMLS_CACHE_EXTERN()
