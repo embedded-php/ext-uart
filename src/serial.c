@@ -283,7 +283,7 @@ PHP_METHOD(UART_Serial, __construct) {
       speedBaud = B4000000;
       break;
     default:
-      zend_throw_exception_ex(zceException, 0, "Invalid baud rate speed '%d'", baudRate);
+      zend_throw_exception_ex(zceException, 0, "Invalid baud rate speed '%ld'", baudRate);
       close(self->fd);
 
       RETURN_THROWS();
