@@ -1,0 +1,12 @@
+{
+  "name": "embedded-php/uart",
+  "type": "php-ext",
+  "license": "mit",
+  "description": "An object-oriented wrapper to the UART Linux Kernel driver",
+  "require": {
+    "php": "^8.0"
+  },
+  "php-ext": {
+    "extension-name": "uart"
+  }
+}
